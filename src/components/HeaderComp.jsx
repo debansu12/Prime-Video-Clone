@@ -269,7 +269,47 @@ function Header() {
                   </div>
                 </div>
               </div>
-              <div className="header-nav-profile-div">
+              <div classNam<div className="header-nav-profile-div">
+  {isSignedIn ? (
+    <ol className="header-nav-profile-ol">
+      <li className="header-nav-profile-li">
+        <label className="header-nav-profile-li-label">
+          <div className="header-nav-profile-li-label-div">
+            <span className="header-nav-profile-li-label-div-span-1">
+              Nikhil
+            </span>
+            <span className="header-nav-profile-li-label-div-span-2"></span>
+          </div>
+        </label>
+
+        {/* Profile Dropdown */}
+        <div className="qwert">
+          <div className="qwert-div">
+            <label className="qwert-label">Your Account</label>
+            <ul className="header-nav-profileinfo-ul">
+              <li className="header-nav-profileinfo-ul-li">
+                <a href="">Help</a>
+              </li>
+              <li className="header-nav-profileinfo-ul-li">
+                <a href="">Account & Settings</a>
+              </li>
+              <li className="header-nav-profileinfo-ul-li">
+                <a href="">Sign out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ol>
+  ) : (
+    <button
+      className="header-signin-btn"
+      onClick={() => setIsSignedIn(true)} // Temporary toggle for testing
+    >
+      Sign In
+    </button>
+  )}
+</div>e="header-nav-profile-div">
                 <ol className="header-nav-profile-ol">
                   <li className="header-nav-profile-li">
                     <label className="header-nav-profile-li-label">
@@ -342,3 +382,4 @@ function Header() {
 }
 
 export default Header;
+
