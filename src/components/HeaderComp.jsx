@@ -1,4 +1,21 @@
-import React, { useState } from "react";
+import Categories from "./Categories";
+import HeaderCategoryLi from "./HeaderCategoryLi";
+import Languages from "./Languages";
+
+function Header() {
+  const [isSignedIn, setIsSignedIn] = useState(false);  // ✅ correct place
+  const [isEmpty, setIsEmpty] = useState(true);
+
+  function handleChange(event) {
+    ...
+  }
+
+  return (
+    ...
+  );
+}
+
+export default Header;import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import Categories from "./Categories";
 import HeaderCategoryLi from "./HeaderCategoryLi";
@@ -342,3 +359,4 @@ function Header() {
 }
 
 export default Header;
+
