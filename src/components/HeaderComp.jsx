@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import Categories from "./Categories";
 import HeaderCategoryLi from "./HeaderCategoryLi";
 import Languages from "./Languages";
-
+const [isSignedIn, setIsSignedIn] = useState(false);
 function Header() {
   const [isEmpty, setIsEmpty] = useState(true);
   function handleChange(event) {
@@ -342,3 +342,4 @@ function Header() {
 }
 
 export default Header;
+
